@@ -22,6 +22,7 @@ def plot_loss(epoch_losses: List[float]) -> None:
     ax.xaxis.get_major_locator().set_params(integer=True)
     ax.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
+    plt.savefig("images/loss.png", dpi=150, bbox_inches="tight")  # show() 전에
     plt.show()
 
 
@@ -44,6 +45,7 @@ def plot_accuracy(report: Dict) -> None:
             ha="center", va="bottom", fontsize=9,
         )
     plt.tight_layout()
+    plt.savefig("images/accuracy.png", dpi=150, bbox_inches="tight")  # show() 전에
     plt.show()
 
 
@@ -75,4 +77,5 @@ def plot_report(report: Dict) -> None:
             )
 
     plt.tight_layout()
+    plt.savefig("images/report.png", dpi=150, bbox_inches="tight")  # show() 전에
     plt.show()
